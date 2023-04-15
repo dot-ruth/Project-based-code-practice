@@ -1,0 +1,74 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-family: poppins;
+    background-color: beige;
+    
+}
+
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; 
+    width: 160px; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    background-color:  #a9c1fc;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color:  black;
+    display: block;
+    float: none;
+  }
+  
+ 
+  .sidenav a:hover {
+    background-color: rgba(195, 193, 193, 0.534);
+    color: white;
+  }
+
+  .sidenav > div {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color:  black;
+    display: block;
+    float: none;
+    margin-bottom: 30px;
+  }
+  
+ 
+  .sidenav > div:hover {
+    background-color: rgba(195, 193, 193, 0.534);
+    color: white;
+  }
+  .main {
+    margin-left: 160px;
+    padding: 0px 10px;
+    }
+
+    /* The sidebar menu */
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 16px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }

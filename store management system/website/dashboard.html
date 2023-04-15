@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav>	
+        <a href="home page.html" ><img src="images/storit.png" width="20px">Storit</a>&nbsp&nbsp
+        <a href="dashboard.html" >Dashboard</a>&nbsp&nbsp
+        <a href="Items.html">Items</a>&nbsp&nbsp
+        <a href="Orders.html">Sales orders</a>&nbsp&nbsp
+        <a href="Menu.html">Menu</a>&nbsp&nbsp	
+        <input type="serach" id="search" name="search" >
+        <img src="images/storit.png" width="20px">&nbsp&nbsp
+        <img src="images/storit.png" width="20px"><br><br>
+    </nav>
+    <table border="2" width="100%" >
+        <tr>
+            <th colspan="4">
+              Sales Activity
+            </th>
+            <th colspan="4">
+                Inventory Summary
+                </th>
+        </tr>
+        <tr>
+            <td rowspan="2">
+             3057 Qty to be packed
+            </td>
+            <td rowspan="2">
+                3057 Qty to be packed
+               </td>
+               <td rowspan="2">
+                3057 Qty to be packed
+               </td>
+               <td rowspan="2">
+                3057 Qty to be packed
+               </td>
+               <td>
+                   quantities in hand=582
+               </td>
+               
+        </tr>
+        <tr>
+            <td>quantities to be recieved=11672</td>
+        </tr>
+        <tr>
+            <th colspan="4">product details</th>
+            <th><pre>top selling items                  <select name="filter" >
+                <option value="today">Today</option>
+                <option value="This month">This month</option>
+                <option value="This year">This Year</option>
+            </select></pre></th>
+        </tr>
+        <tr><td colspan="2">
+           
+           Low Stock Item=25
+        </td>
+           <td colspan="2" rowspan="3">Active item=79%</td>
+           <td rowspan="3">no items were invoiced in this time frame</td>
+        </tr>
+        <tr>
+            <td colspan="2">All item groups=49</td>
+        </tr>
+        <tr>
+            <td colspan="2">All items=360</td>
+        </tr>
+        
+         <tr>
+             <th colspan="2"><pre>Purchase Order          <select name="filter" >
+                <option value="today">Today</option>
+                <option value="This month">This month</option>
+                <option value="This year">This Year</option>
+            </select></pre></th>
+            <th colspan="3">
+                Sales order
+            </th>
+         </tr>  
+        <tr>
+            <td colspan="2">quantities ordered=625,000</td>
+            <td colspan="3" rowspan="2"><table border="2" width="100%">
+                <th colspan="4"><pre>Sales order                                                         <button type="submit">Add</button></pre></th>
+                <tr>
+                   
+                        <th>Date</th>
+                        <th>Sales-order#</th>
+                        <th>Custmor Name</th>
+                        <th>Payment</th>
+                   
+                </tr>
+                <tr>
+                   
+                    <td>7-oct-2021</td>
+                    <td>So-0000</td>
+                    <td>custmor 0</td>
+                    <td><input type="checkbox" name="paymeny" ></td>
+               
+            </tr>
+            <tr>
+                   
+                <td>7-oct-2021</td>
+                <td>So-0001</td>
+                <td>custmor 1</td>
+                <td><input type="checkbox" name="paymeny" ></td>
+           
+        </tr>
+            </table></td>
+        </tr>
+        <tr>
+            <td colspan="2">Total cost=$101,811.084</td>
+        </tr>
+    </table>
+</body>
+</html>
