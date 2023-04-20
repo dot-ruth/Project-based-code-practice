@@ -1,0 +1,23 @@
+{
+  "name": "mern-stack",
+  "version": "1.0.0",
+  "description": "Goal setter App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node Backend/server.js ",
+    "server": "nodemon backend/server.js"
+  },
+  "author": "Ruth Abiti",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongodb": "^5.3.0",
+    "mongoose": "^7.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
