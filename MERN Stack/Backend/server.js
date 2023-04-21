@@ -11,6 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 
-app.use('/api/goals',require('./routes/Goal_routes.js'))
+app.use('/api/goals',require('./routes/Goal_routes'))
+app.use('/api/users',require('./routes/User_routes'))
 
 app.listen(port,()=> console.log(`server started, running ${port}`))
