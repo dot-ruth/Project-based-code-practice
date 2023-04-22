@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler')
 const Goal = require('../model/Goal_model')
+const User = require('../model/User_model')
 // @desc Get goals
 //@route GET api/goals
 //@access Private
@@ -31,6 +32,22 @@ const updateGoals = asyncHandler(async (req,res) => {
         res.status(400)
         throw new error ('goal not found')
     }
+
+    const user = await User.findById(req.user.id)
+
+    //check for user
+    if(!user){
+        res.status(401)
+        throw new error ('Use not found')
+    
+    }
+    
+    //make sure the login user matches the goal user
+    if(goal.user.toString() !== user.id){
+        res.status(401)
+        throw new Error('User not authorized')
+    }
+
     const updatedgoal = await Goal.findByIdAndUpdate(req.params.id,req.body,{
         new:true,
     })
@@ -41,11 +58,29 @@ const updateGoals = asyncHandler(async (req,res) => {
 //@route DELETE api/goals/:id
 //@access Private
 const deleteGoals = asyncHandler(async (req,res) => {
-    const goal = await Goal.findByIdAndRemove(req.params.id)
+    const goal = await Goal.findById(req.params.id)
     if(!goal) {
         res.status(400)
         throw new error ('goal not found')
     }
+
+    const user = await User.findById(req.user.id)
+
+    //check for user
+    if(!user){
+        res.status(401)
+        throw new error ('Use not found')
+    
+    }
+    
+    //make sure the login user matches the goal user
+    if(goal.user.toString() !== user.id){
+        res.status(401)
+        throw new Error('User not authorized')
+    }
+
+    await Goal.findByIdAndRemove(req.params.id)
+
     res.json({message: `Deleted `})
 })
 
