@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\ListingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,21 +15,20 @@ use App\Models\Listing;
 |
 */
 
+// Common Resource Routes:
+// index - Show all listings
+// show - Show single listing
+// create - Show form to create new listing
+// store - Store new listing (from create)
+// edit - Show form to edit listing
+// update - Update listing(from edit)
+// destroy - Delete listing  
+
 // All listing
-Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'latest listings',
-        'listings' => Listing::all()
-    ]);
-});
+Route::get('/', [ListingController::class, 'index']);
 
 // Single Listing
-Route::get('/listing/{id}', function ($id) {
-    return view('listing', [
-        'heading' => 'single Listing',
-        'listing' => Listing::find($id)
-    ]);
-});
+Route::get('/listing/{listing}', [ListingController::class, 'show']);
 
 // Route::get('/hello', function () {
 //     // return 'hello'

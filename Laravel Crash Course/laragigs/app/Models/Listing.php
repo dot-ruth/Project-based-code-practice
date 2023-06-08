@@ -2,6 +2,26 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class listing extends Model
+{
+    use HasFactory;
+
+    public function scopeFilter($query, array $filters)
+    {
+    }
+}
+
+/*
+
+manueally making a model
+
+<?php
+
+namespace App\Models;
+
 // <!-- php artisan make:model listing => the cmd line code to make a model -->
 
 
@@ -39,3 +59,5 @@ class Listing
         }
     }
 }
+
+*/
