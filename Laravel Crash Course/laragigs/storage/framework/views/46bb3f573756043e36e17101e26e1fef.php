@@ -51,6 +51,11 @@
 
 </div>
 
+<div class="mt-6 p-4">
+    <?php echo e($listings->links()); ?>
+
+</div>
+
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>

@@ -24,7 +24,7 @@
     <div class="flex">
         <img
             class="hidden w-48 mr-6 md:block"
-            src="<?php echo e(asset('images/no-image.png')); ?>"
+            src="<?php echo e($list->logo?asset('storage/'.$list->logo):asset('images/no-image.png')); ?>"
             alt="company logo"
         />
         <div>

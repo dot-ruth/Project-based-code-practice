@@ -1,3 +1,4 @@
+
 <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.layout','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('layout'); ?>
@@ -29,7 +30,7 @@
           >
               <img
                   class="w-48 mr-6 mb-6"
-                  src="<?php echo e(asset('images/no-image.png')); ?>"
+                  src="<?php echo e($listing->logo?asset('storage/'.$listing->logo):asset('images/no-image.png')); ?>"
                   alt=""
               />
 
@@ -80,6 +81,30 @@
                   </div>
               </div>
           </div>
+       <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
+<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
+<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php endif; ?>
+      <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.card','data' => ['class' => 'mt-4 p-2 flex space-x-6']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('card'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['class' => 'mt-4 p-2 flex space-x-6']); ?>
+        <a href="/listing/<?php echo e($listing->id); ?>/edit">
+            <i class="fa-solid fa-pencil"></i>Edit
+        </a>
+
+        <form method="POST" action="/listing/<?php echo e($listing->id); ?>">
+        <?php echo csrf_field(); ?>
+        <?php echo method_field('DELETE'); ?>
+        <button class="text-red-500"><i class="fa-solid fa-trash"></i>Delete</button>
+        </form>
        <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>

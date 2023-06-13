@@ -9,8 +9,27 @@ class listing extends Model
 {
     use HasFactory;
 
+    // mass-assignment
+    // protected $fillable = ['company', 'title', 'location', 'email', 'website', 'tags', 'description'];
+
     public function scopeFilter($query, array $filters)
     {
+        // ?? = Not, in this case if filter is not false
+        if ($filters['tag'] ?? false) {
+            $query->where('tags', 'like', '%' . request('tag') . '%');
+        }
+
+        if ($filters['search'] ?? false) {
+            $query->where('title', 'like', '%' . request('search') . '%')
+                ->orwhere('description', 'like', '%' . request('search') . '%')
+                ->orwhere('tags', 'like', '%' . request('search') . '%');
+        }
+    }
+
+    //relationship with user
+    public function User()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
 
