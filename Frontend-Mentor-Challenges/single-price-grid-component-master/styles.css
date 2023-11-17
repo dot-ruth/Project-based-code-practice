@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  padding: 3rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.container .con1 {
+  background-color: white;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+}
+.container .con1 .title {
+  color: hsl(179deg, 62%, 43%);
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+.container .con1 .day {
+  color: hsl(71deg, 73%, 54%);
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+.container .con1 .detail {
+  font-size: 20px;
+  color: hsl(204deg, 43%, 93%);
+  font-weight: 700;
+  line-height: 1.2rem;
+  padding: 1rem 5rem 0 0;
+}
+.container .con2 {
+  background-color: yellow;
+  margin: 0 1rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container .con2 .con-left, .container .con2 .con-right {
+  padding: 1rem;
+  background-color: hsl(179deg, 62%, 43%);
+}
+.container .con2 .con-left .con-title, .container .con2 .con-right .con-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.container .con2 .con-left .month-amount, .container .con2 .con-right .month-amount {
+  color: hsl(204deg, 43%, 93%);
+}
+.container .con2 .con-left .month-amount .amount, .container .con2 .con-right .month-amount .amount {
+  color: white;
+  font-size: 25px;
+  margin-right: 0.2rem;
+}
+.container .con2 .con-left .con-detail, .container .con2 .con-right .con-detail {
+  color: white;
+  margin: 1rem 0;
+}
+.container .con2 .con-left button, .container .con2 .con-right button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid hsl(71deg, 73%, 54%);
+  background-color: hsl(71deg, 73%, 54%);
+}
+.container .con2 .con-right {
+  background-color: hsl(179deg, 57%, 40%);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 25rem;
+  }
+  .container .con2 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}/*# sourceMappingURL=styles.css.map */

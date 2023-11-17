@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+body {
+  background: url("images/bg-header-desktop.png") no-repeat;
+}
+
+.header {
+  color: hsl(210deg, 10%, 33%);
+  margin-bottom: 0.5rem;
+}
+
+.detail {
+  color: hsl(201deg, 11%, 66%);
+  margin-bottom: 1rem;
+  padding: 0 15rem;
+}
+
+button {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  color: white;
+}
+
+.head, .track, .access, .charge, .clip {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.ios {
+  border: 1px solid hsl(171deg, 66%, 44%);
+  background-color: hsl(171deg, 66%, 44%);
+}
+
+.mac {
+  border: 1px solid hsl(233deg, 100%, 69%);
+  background-color: hsl(233deg, 100%, 69%);
+}
+
+.head .logo {
+  margin: 1rem;
+}
+
+.track .flex1-con {
+  display: flex;
+  margin: 1rem;
+}
+.track .flex1-con .right {
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+}
+.track .flex1-con .right .right-item {
+  text-align: left;
+  padding: 2rem;
+  margin: 0;
+  height: 10rem;
+}
+.track .flex1-con .right .right-item .r_header {
+  color: hsl(210deg, 10%, 33%);
+  font-size: 20px;
+}
+.track .flex1-con .right .right-item .r_detail {
+  color: hsl(201deg, 11%, 66%);
+}
+
+.flex2-con, .flex3-con, .flex4-con {
+  display: flex;
+  margin: 6rem auto;
+  justify-content: space-between;
+}
+
+.flex4-con {
+  align-items: center;
+  line-height: 2rem;
+}/*# sourceMappingURL=styles.css.map */

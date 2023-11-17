@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Kumbh Sans', sans-serif ;
+}
+body{
+ background: url('images/bg-pattern-bottom.svg') 120% -300% no-repeat,url('images/bg-pattern-top.svg') -30% 300%  no-repeat;  
+background-size: 40rem;
+background-color:  hsl(185, 75%, 39%);
+height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    width: 18rem;
+    margin: 3rem auto;
+    .pp{
+        transform: translateY(-2.5rem);
+        border-radius: 50%;
+        border: 2px solid white;
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto; 
+    }
+    .name-age{
+        text-align: center;
+        .name{
+      font-weight: 700;
+      margin:0 .5rem;
+        }
+    }
+    .city{
+        text-align: center;
+        margin: .3rem;
+    }
+    .flex-con{
+        display: flex;
+        justify-content: space-around;
+        .flex-item{
+            text-align: center;
+            margin: 1rem;
+        }
+    }
+
+
+    }
+    

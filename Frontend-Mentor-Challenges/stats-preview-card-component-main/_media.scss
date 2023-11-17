@@ -1,0 +1,36 @@
+@media screen and (max-width:600px) {
+    .container{
+
+        display: flex;
+        flex-direction: column-reverse;
+        width: 20rem;
+        margin: 3rem auto;
+        background-color: hsl(244, 38%, 16%);
+       
+        .left{
+          .pic{
+            border-radius:  10px 10px 0px 0px;
+          width: 20rem;
+          } 
+          .pic-color{
+            width: 20rem;
+            height: 235px;
+            border-radius:  10px 10px 0px 0px;
+          }
+        }
+        .right{
+           margin: 1rem 1rem 2rem 1rem;
+           .title{
+            text-align: center;
+           }
+           .detail{
+            text-align: center;
+           }
+           .flex-container{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+           }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+header {
+  width: 25rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+header .header-thin {
+  font-weight: 200;
+  line-height: 1.2rem;
+  margin: 0.5rem;
+  color: hsl(229deg, 6%, 66%);
+}
+
+.flex-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 31rem;
+  margin: 1rem 3rem;
+}
+.flex-con .flex-item {
+  width: 20rem;
+  height: 15rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.1rem 1rem 1rem 0;
+  position: relative;
+}
+.flex-con .flex-item .flex-item-title {
+  font-size: 23px;
+  color: hsl(229deg, 6%, 66%);
+  font-weight: 900;
+}
+.flex-con .flex-item .flex-item-detail {
+  color: hsl(229deg, 6%, 66%);
+}
+.flex-con .flex-item .icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+}
+.flex-con .big-con {
+  margin-top: 1rem;
+}
+.flex-con #team {
+  border-radius: 10px;
+  box-shadow: 0rem -0.5rem hsl(0deg, 78%, 62%);
+}
+.flex-con #karma {
+  border-radius: 10px;
+  box-shadow: 0rem -0.5rem hsl(34deg, 97%, 64%);
+}
+.flex-con #super {
+  border-radius: 10px;
+  box-shadow: 0rem -0.5rem hsl(212deg, 86%, 64%);
+}
+.flex-con #cal {
+  border-radius: 10px;
+  box-shadow: 0rem -0.5rem hsl(180deg, 62%, 55%);
+}
+
+@media screen and (max-width: 600px) {
+  .flex-con {
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}/*# sourceMappingURL=styles.css.map */

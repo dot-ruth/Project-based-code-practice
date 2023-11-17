@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(257deg, 40%, 49%);
+  background-image: url("images/bg-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+header {
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+.con .con-left .mockup {
+  width: 30rem;
+}
+.con .con-right h2 {
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0;
+  color: white;
+  padding: 1rem;
+}
+.con .con-right .detail {
+  color: white;
+  line-height: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.con .con-right button {
+  padding: 0.5rem 2rem;
+  margin: 1rem 1rem;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .con {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .con .con-left .mockup {
+    width: 18rem;
+  }
+  .con .con-right h2, .con .con-right .detail {
+    text-align: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

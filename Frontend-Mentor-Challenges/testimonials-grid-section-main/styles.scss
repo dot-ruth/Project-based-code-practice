@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed',sans-serif;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+.grid-con{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "d d j k"
+    "j2 p p k";
+    margin: 1rem 3rem;
+    .grid-item{
+        padding: 1rem;
+        margin: .5rem 1rem;
+        border-radius: 10px;
+        width: fit-content;
+        .name-txt{
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+      .pic{
+        margin-right: .5rem;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+      .name{
+        color: hsl(0, 0%, 100%);
+      }
+      .ver{
+        color: hsl(0, 0%, 50%);
+      }
+
+    }
+    .big-detail{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        margin: 1rem 0;
+    }
+    .detail{
+        color: hsl(0, 0%, 70%);
+    }
+    }
+    #d{
+        grid-area: d;
+        background: url('images/bg-pattern-quotation.svg') 20rem top no-repeat ;
+        background-color: hsl(263, 55%, 52%);
+    }
+    #j{
+        grid-area: j;
+        background-color: hsl(217, 19%, 35%);
+    }
+    #k{
+        grid-area: k;
+        background-color: white;
+        .name-txt{
+            .name{
+            color: black;
+            }
+        }
+            .big-detail{
+                color: black;   
+            }
+        
+        
+    }
+    #j2{
+        grid-area: j2;
+        background-color: white;
+        .name-txt{
+            .name{
+            color: black;
+            }
+        }
+            .big-detail{
+                color: black;   
+            }
+    }
+    #p{
+        grid-area: p;
+        background-color: hsl(219, 29%, 14%);
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .grid-con{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(5);
+    grid-template-areas: "d" "j" "j2" "p" "k";
+    .grid-item{
+        width: fit-content;
+    }
+    }
+}

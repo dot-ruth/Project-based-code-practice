@@ -25,22 +25,22 @@ function App() {
     const submit = async e => {
         e.preventDefault();
 
-        await axios.post('http://localhost:8000/api/messages',{
-          username:username,
-          message:message
-        }  )
-          .then((response)=>{
-            console.log('message sent')
-      })
+      //   await axios.post('http://localhost:8000/api/messages',{
+      //     username:username,
+      //     message:message
+      //   }  )
+      //     .then((response)=>{
+      //       console.log('message sent')
+      // })
 
-        // await fetch('http://localhost:8000/api/messages', {
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     body: JSON.stringify({
-        //         username,
-        //         message
-        //     })
-        // });
+        await fetch('http://localhost:8000/api/messages', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                username,
+                message
+            })
+        });
 
         setMessage('');
     }

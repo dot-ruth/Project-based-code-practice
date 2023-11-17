@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+.grid-con {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "d d j k" "j2 p p k";
+  margin: 1rem 3rem;
+}
+.grid-con .grid-item {
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.grid-con .grid-item .name-txt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.grid-con .grid-item .name-txt .pic {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.grid-con .grid-item .name-txt .name {
+  color: hsl(0deg, 0%, 100%);
+}
+.grid-con .grid-item .name-txt .ver {
+  color: hsl(0deg, 0%, 50%);
+}
+.grid-con .grid-item .big-detail {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 1rem 0;
+}
+.grid-con .grid-item .detail {
+  color: hsl(0deg, 0%, 70%);
+}
+.grid-con #d {
+  grid-area: d;
+  background: url("images/bg-pattern-quotation.svg") 20rem top no-repeat;
+  background-color: hsl(263deg, 55%, 52%);
+}
+.grid-con #j {
+  grid-area: j;
+  background-color: hsl(217deg, 19%, 35%);
+}
+.grid-con #k {
+  grid-area: k;
+  background-color: white;
+}
+.grid-con #k .name-txt .name {
+  color: black;
+}
+.grid-con #k .big-detail {
+  color: black;
+}
+.grid-con #j2 {
+  grid-area: j2;
+  background-color: white;
+}
+.grid-con #j2 .name-txt .name {
+  color: black;
+}
+.grid-con #j2 .big-detail {
+  color: black;
+}
+.grid-con #p {
+  grid-area: p;
+  background-color: hsl(219deg, 29%, 14%);
+}
+
+@media screen and (max-width: 600px) {
+  .grid-con {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5);
+    grid-template-areas: "d" "j" "j2" "p" "k";
+  }
+  .grid-con .grid-item {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}/*# sourceMappingURL=styles.css.map */

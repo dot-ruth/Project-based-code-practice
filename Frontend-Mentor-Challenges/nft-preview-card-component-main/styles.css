@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    background-color: hsl(217, 54%, 11%);
+}
+.container{
+    width: 18rem;
+    margin: 2rem auto;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    position: relative;
+}
+.equilibrum{
+    width: 16rem;
+    margin: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+}
+
+.hover-dis:hover{
+cursor: pointer;
+opacity: 1;
+transform: scale(1);
+}
+.hover-dis{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background-color:  hsla(215, 51%, 70%,.3);
+    width: 16rem;
+    margin: 1rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    text-align: center;
+    height: 256px;
+}
+.view{
+    margin: 40% auto;
+}
+.container-item{
+    padding: 1rem;
+    background-color: hsl(216, 50%, 16%);
+}
+h3{
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 1rem;
+}
+h3:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+p{
+    color: hsl(215, 32%, 27%);
+    
+    line-height: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.days-amount{
+    margin: 1rem 0;
+    position: relative;
+}
+.amount{
+    color:hsl(178, 100%, 50%) ;
+    position: absolute;
+    left: 1rem;
+}
+.daysleft{
+    position: absolute;
+    right: 1rem;
+    color: hsl(215, 32%, 27%);
+}
+.profile{
+    margin: 0 1rem 0 0;
+    width: 3rem;
+}
+.profile-con{
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c{
+    color:hsl(215, 32%, 27%)  
+}
+.name{
+    margin: .2rem;
+    color: white;
+}
+.name:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
